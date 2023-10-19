@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- linking dancing font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <!-- linking roboto font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <!-- linking font style inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+
+    <!-- linking font style inria -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap">
+
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/ae7cd747fe.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        ul{
+            list-style: none;
+        }
+
+        li{
+            display: inline-block;
+        }
+
+        .navbar{
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            background-color: #e9e0d3;
+        }
+
+        .navbar .logo{
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .menu{
+            display: none;
+        }
+
+        .navbar .navlinks ul li{
+            font-size: 20px;
+            margin: 0 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+        }
+
+        .navbar .navlinks ul li:hover{
+            color: rgb(63, 129, 125);
+        }
+
+        .content{
+            padding: 50px 8%;
+            position: relative;
+            height: 100%;
+        }
+
+        .content .bg{
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100vw;
+            height: 110%;
+            /* background-image: url("_a599b4ea-66b9-42a3-bf2e-44bae42be687.jpg"); */
+            background-image: url("https://th.bing.com/th/id/OIG.nBaxynuXc8wU5T6mTA2V?pid=ImgGn");
+            background-size: 1024px 1024px;
+            background-repeat: repeat;
+            opacity: 0.5;
+            z-index: -2;
+        }
+
+        .intro{
+            display: grid;
+            grid-auto-flow: column;
+            gap: 10%;
+            height: 100%;
+        }
+
+        .intro .p-btn{
+            padding: 40px 0;
+            background-color: rgba(255, 255, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 20%;
+        }
+        
+        .intro p{
+            
+            font-size: 32px;
+            min-width: 35vw;
+            text-align: center;
+            line-height: 1.3;
+            font-weight: 300;
+            font-family: 'Dancing Script', cursive;
+            word-spacing: 3px;
+        }
+
+        .p-btn .btn{
+            margin: 0 10%;
+            background-color: rgb(83, 161, 156);
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 400;
+            border-radius: 2rem;
+            text-align: center;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .p-btn .btn:hover{
+            background-color: whitesmoke;
+            color: #000;
+            border: 2px solid rgb(11 136 128);
+        }
+
+        .p-btn .btn i{
+            margin: 0 10px;
+            font-weight: 900;
+        }
+
+        .intro img{
+            width: 35vw;
+            height: auto;
+        }
+
+        .what-we-offer{
+            padding: 10% 0;
+        }
+
+        .what-we-offer h2{
+            text-align: center;
+            font-size: 80px;
+            -webkit-text-stroke: 1px #ffffff;
+            -webkit-text-fill-color:rgb(41, 38, 38);
+        }
+
+        .offers{
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+            margin-top:30px;
+            justify-content: center;
+        }
+
+        .offer-item{
+            width: 31%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .offer-item i{
+            font-size: 60px;
+            color:rgb(11 136 128);
+            margin-bottom: 17px;
+        }
+
+        .offer-item h4{
+                font-size: 20px;
+                font-family: 'Inria Sans';
+                margin-bottom: 20px;
+        }
+
+        .offer-item p{
+            font-size: 14px;
+            font-family: 'Inter';
+            font-weight: 300;
+            line-height: 25px;
+        }
+
+        @media screen and (max-width:800px) {
+            .navbar .logo{
+                font-size: 25px;
+                font-weight: 600;
+            }
+            
+            .navlinks{
+                display: none;
+            }
+
+            .menu{
+                display: block;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .intro{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+
+            .intro img{
+                width: 100%;
+                height: auto;
+            }
+
+            .intro p{
+                margin-bottom: 15%;
+            }
+
+            .what-we-offer h2{
+                font-size: 45px;
+            }
+
+            .offer-item{
+                width: 95%;
+            }
+
+            .offer-item i{
+                font-size: 42px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">E-STUDY</div>
+        <div class="menu">&#9776;</div>
+        <div class="navlinks">
+            <ul>
+                <li>HOME</li>
+                <li>OFFERS</li>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="bg"></div>
+        <div class="intro">
+            <div class="p-btn">
+                <p>Welcome to the best self-study library! Our peaceful and well-equipped study cabins provide the perfect environment for focused learning. We offer a variety of journals and online resources to support your personal growth and development.</p>
+                <div class="btn">JOIN NOW<i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+            </div>
+            <img src="https://th.bing.com/th/id/OIG.CA3nekvTNTh4wvwx5ZES?pid=ImgGn" alt="">
+            <!-- <img src="model.jpg" alt=""> -->
+        </div>
+
+        <div class="what-we-offer">
+            <h2>WHAT WE OFFER</h2>
+            <div class="offers">
+                <div class="offer-item">
+                    <i class="fas fa-chair"></i>
+                    <h4>Separate cabin</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, aspernatur quasi. Et, vitae tempore. Ut dolorum officiis tempore, odio ducimus facere sapiente vitae, perferendis quas molestias neque nesciunt, aliquam officia.</p>
+                </div>
+                <div class="offer-item">
+                    <i class="fas fa-wifi"></i>
+                    <h4>Fast wifi</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, aspernatur quasi. Et, vitae tempore. Ut dolorum officiis tempore, odio ducimus facere sapiente vitae, perferendis quas molestias neque nesciunt, aliquam officia.</p>
+                </div>
+                <div class="offer-item">
+                    <i class="fa fa-rupee-sign"></i>
+                    <h4>Pocket friendly</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, aspernatur quasi. Et, vitae tempore. Ut dolorum officiis tempore, odio ducimus facere sapiente vitae, perferendis quas molestias neque nesciunt, aliquam officia.</p>
+                </div>
+                <div class="offer-item">
+                    <i class="fas fa-soap"></i>
+                    <h4>Hygienic environment</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, aspernatur quasi. Et, vitae tempore. Ut dolorum officiis tempore, odio ducimus facere sapiente vitae, perferendis quas molestias neque nesciunt, aliquam officia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
