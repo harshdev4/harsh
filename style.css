@@ -205,13 +205,13 @@
     max-width: 45%;
 }
 
-#skills .fa-solid,
-.fa-brands {
+#skills .fa-solid, .fa-brands {
     font-size: 1.35rem;
     padding: 12px 10px;
     border: 1px solid #06e0f0;
     border-radius: 50%;
     color: #06e0f0;
+    margin-bottom: 0;
 }
 
 #skills .fa-brands {
