@@ -17,7 +17,3 @@ To view my portfolio website, simply visit [https://harshdev4.github.io/harsh/](
 ## Contributing
 
 This is a personal portfolio website, so contributions are not typically accepted. However, if you notice any errors or have suggestions for improvements, feel free to open an issue on the GitHub repository.
-
-## License
-
-This project is licensed under the MIT License.
