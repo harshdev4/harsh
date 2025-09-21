@@ -196,13 +196,27 @@
 .skill-flex {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 25px 0;
     justify-content: space-between;
-    row-gap: 30px;
+    row-gap: 60px;
 }
 
 .skill {
     max-width: 45%;
+    display: grid;
+    grid-template-rows: 40px max-content max-content;
+}
+
+.skill-icon{
+    width: 30px;
+}
+
+#express-icon{
+    width: 40px;
+}
+
+#mongo-icon{
+    width: 20px;
 }
 
 #skills .fa-solid, .fa-brands {
